@@ -78,7 +78,7 @@ const CheckoutForm = ({ product, onSuccess, onError }) => {
         <h3 className="text-lg font-semibold mb-2">Order Summary</h3>
         <div className="flex justify-between items-center">
           <span>{product.name}</span>
-          <span className="font-bold">${product.price}</span>
+          <span className="font-bold">₹{product.price}</span>
         </div>
       </div>
 
@@ -118,7 +118,7 @@ const CheckoutForm = ({ product, onSuccess, onError }) => {
         ) : (
           <>
             <CreditCard className="w-5 h-5" />
-            <span>Pay ${product.price}</span>
+            <span>Pay ₹{product.price}</span>
           </>
         )}
       </button>
