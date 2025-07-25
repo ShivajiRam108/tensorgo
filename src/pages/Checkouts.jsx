@@ -26,11 +26,11 @@ const Checkout = () => {
   const handlePaymentSuccess = () => {
     window.alert('Payment Successful!');
     setPaymentSuccess(true);
-    setPaymentError('');
+    setPaymentError('')
   };
 
   const handlePaymentError = (error) => {
-    window.alert(`Payment Failed: ${error}`);
+    window.alert(`Payment Failed: ₹{error}`);
     setPaymentError(error);
     setPaymentSuccess(false);
   };

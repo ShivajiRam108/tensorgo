@@ -82,7 +82,7 @@ const Home = () => {
 
 const FeatureCard = ({ icon, title, desc, bg }) => (
   <div className="text-center px-4">
-    <div className={`${bg} w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4`}>
+    <div className={`₹{bg} w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4`}>
       {icon}
     </div>
     <h3 className="text-xl font-semibold text-gray-800 mb-2">{title}</h3>

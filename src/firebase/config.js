@@ -1,10 +1,9 @@
-// src/services/firebase.js
 import { initializeApp } from 'firebase/app';
 import { getAuth, GoogleAuthProvider } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
 import { getFunctions } from 'firebase/functions';
 
-// ✅ Firebase config from .env file
+//  Firebase config from .env file
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
   authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
@@ -15,12 +14,12 @@ const firebaseConfig = {
   measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID,
 };
 
-console.log('✅ Firebase Config Loaded:', firebaseConfig);
+console.log(' Firebase Config Loaded:', firebaseConfig);
 
-// 🔥 Initialize Firebase
+//  Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-// 📦 Export Firebase services
+//  Export Firebase services
 export const auth = getAuth(app);
 export const googleProvider = new GoogleAuthProvider();
 export const db = getFirestore(app);

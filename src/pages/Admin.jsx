@@ -62,15 +62,15 @@ const Admin = () => {
 
     console.log('Test email notification:', {
       to: import.meta.env.VITE_ADMIN_EMAIL,
-      subject: `New Payment Received - ${testPayment.productName}`,
+      subject: `New Payment Received - ₹{testPayment.productName}`,
       body: `
         A new payment has been received:
         
-        Product: ${testPayment.productName}
-        Amount: $${testPayment.amount}
-        Customer: ${testPayment.userName} (${testPayment.userEmail})
-        Payment ID: ${testPayment.paymentMethodId}
-        Date: ${testPayment.timestamp.toLocaleString()}
+        Product: ₹{testPayment.productName}
+        Amount: ₹₹{testPayment.amount}
+        Customer: ₹{testPayment.userName} (₹{testPayment.userEmail})
+        Payment ID: ₹{testPayment.paymentMethodId}
+        Date: ₹{testPayment.timestamp.toLocaleString()}
       `
     });
 
@@ -120,7 +120,7 @@ const Admin = () => {
               </div>
               <div className="ml-4">
                 <p className="text-sm font-medium text-gray-600">Total Sales</p>
-                <p className="text-2xl font-bold text-gray-900">${stats.totalSales.toFixed(2)}</p>
+                <p className="text-2xl font-bold text-gray-900">₹{stats.totalSales.toFixed(2)}</p>
               </div>
             </div>
           </div>
@@ -156,7 +156,7 @@ const Admin = () => {
               </div>
               <div className="ml-4">
                 <p className="text-sm font-medium text-gray-600">Avg. Order Value</p>
-                <p className="text-2xl font-bold text-gray-900">${stats.averageOrderValue.toFixed(2)}</p>
+                <p className="text-2xl font-bold text-gray-900">₹{stats.averageOrderValue.toFixed(2)}</p>
               </div>
             </div>
           </div>
@@ -227,7 +227,7 @@ const Admin = () => {
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap">
                         <div className="text-sm font-medium text-gray-900">
-                          ${payment.amount.toFixed(2)}
+                          ₹{payment.amount.toFixed(2)}
                         </div>
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap">
